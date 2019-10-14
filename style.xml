@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="GB2312" ?>
+<StyledLayerDescriptor version="1.0.0" xsi:schemaLocation="http://www.opengis.net/sld StyledLayerDescriptor.xsd" xmlns="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <NamedLayer>
+    <Name>Simple polygon</Name>
+    <UserStyle>
+      <Title>GeoServer SLD Cook Book: Simple polygon</Title>
+      <FeatureTypeStyle>
+        <Rule>
+          <Title>按属性值判断</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>XZQMC</ogc:PropertyName>
+              <ogc:Literal>三里镇</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FF0000</CssParameter>
+            </Fill>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Title>小于450122108</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsLessThan>
+              <ogc:PropertyName>XZQDM</ogc:PropertyName>
+              <ogc:Literal>450122108</ogc:Literal>
+            </ogc:PropertyIsLessThan>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FF7F00</CssParameter>
+            </Fill>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Title>在450122108和450127101之间</Title>
+          <ogc:Filter>
+            <ogc:And>
+              <ogc:PropertyIsGreaterThanOrEqualTo>
+                <ogc:PropertyName>XZQDM</ogc:PropertyName>
+                <ogc:Literal>450122108</ogc:Literal>
+              </ogc:PropertyIsGreaterThanOrEqualTo>
+              <ogc:PropertyIsLessThan>
+                <ogc:PropertyName>XZQDM</ogc:PropertyName>
+                <ogc:Literal>450721117</ogc:Literal>
+              </ogc:PropertyIsLessThan>
+            </ogc:And>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FFFF00</CssParameter>
+            </Fill>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Title>大于450721117</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsGreaterThanOrEqualTo>
+              <ogc:PropertyName>XZQDM</ogc:PropertyName>
+              <ogc:Literal>450721117</ogc:Literal>
+            </ogc:PropertyIsGreaterThanOrEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#00FF00</CssParameter>
+            </Fill>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#e03b3b</CssParameter>
+              <CssParameter name="fill-opacity">0.5</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#000000</CssParameter>
+              <CssParameter name="stroke-width">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <TextSymbolizer>
+            <Label>
+              <ogc:PropertyName>XZQMC</ogc:PropertyName>
+            </Label>
+            <Font>
+              <CssParameter name="font-family">微软雅黑</CssParameter>
+              <CssParameter name="font-size">15</CssParameter>
+              <CssParameter name="font-style">normal</CssParameter>
+              <CssParameter name="font-weight">bold</CssParameter>
+            </Font>
+            <LabelPlacement>
+              <PointPlacement>
+                <AnchorPoint>
+                  <AnchorPointX>0.5</AnchorPointX>
+                  <AnchorPointY>0.5</AnchorPointY>
+                </AnchorPoint>
+              </PointPlacement>
+            </LabelPlacement>
+            <Fill>
+              <CssParameter name="fill">#FFFFFF</CssParameter>
+            </Fill>
+            <!-- <VendorOption name="followLine">true</VendorOption> -->
+          </TextSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>Large</Name>
+          <MaxScaleDenominator>100000</MaxScaleDenominator>
+          <TextSymbolizer>
+            <Label>
+              <ogc:PropertyName>XZQMC</ogc:PropertyName>
+            </Label>
+            <Font>
+              <CssParameter name="font-family">微软雅黑</CssParameter>
+              <CssParameter name="font-size">15</CssParameter>
+              <CssParameter name="font-style">normal</CssParameter>
+              <CssParameter name="font-weight">bold</CssParameter>
+            </Font>
+            <LabelPlacement>
+              <PointPlacement>
+                <AnchorPoint>
+                  <AnchorPointX>0.5</AnchorPointX>
+                  <AnchorPointY>0.5</AnchorPointY>
+                </AnchorPoint>
+              </PointPlacement>
+            </LabelPlacement>
+            <Fill>
+              <CssParameter name="fill">#00FFFF</CssParameter>
+            </Fill>
+          </TextSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>Medium</Name>
+          <MinScaleDenominator>100000</MinScaleDenominator>
+          <MaxScaleDenominator>600000</MaxScaleDenominator>
+          <TextSymbolizer>
+            <Label>
+              <ogc:PropertyName>XZQMC</ogc:PropertyName>
+            </Label>
+            <Font>
+              <CssParameter name="font-family">微软雅黑</CssParameter>
+              <CssParameter name="font-size">15</CssParameter>
+              <CssParameter name="font-style">normal</CssParameter>
+              <CssParameter name="font-weight">bold</CssParameter>
+            </Font>
+            <LabelPlacement>
+              <PointPlacement>
+                <AnchorPoint>
+                  <AnchorPointX>0.5</AnchorPointX>
+                  <AnchorPointY>0.5</AnchorPointY>
+                </AnchorPoint>
+              </PointPlacement>
+            </LabelPlacement>
+            <Fill>
+              <CssParameter name="fill">#0000FF</CssParameter>
+            </Fill>
+          </TextSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>Small</Name>
+          <MinScaleDenominator>600000</MinScaleDenominator>
+          <TextSymbolizer>
+            <Label>
+              <ogc:PropertyName>XZQMC</ogc:PropertyName>
+            </Label>
+            <Font>
+              <CssParameter name="font-family">微软雅黑</CssParameter>
+              <CssParameter name="font-size">15</CssParameter>
+              <CssParameter name="font-style">normal</CssParameter>
+              <CssParameter name="font-weight">bold</CssParameter>
+            </Font>
+            <LabelPlacement>
+              <PointPlacement>
+                <AnchorPoint>
+                  <AnchorPointX>0.5</AnchorPointX>
+                  <AnchorPointY>0.5</AnchorPointY>
+                </AnchorPoint>
+              </PointPlacement>
+            </LabelPlacement>
+            <Fill>
+              <CssParameter name="fill">#8B00FF</CssParameter>
+            </Fill>
+          </TextSymbolizer>
+        </Rule>
+      </FeatureTypeStyle>
+    </UserStyle>
+  </NamedLayer>
+</StyledLayerDescriptor>

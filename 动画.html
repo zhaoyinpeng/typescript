@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    div {
+      width: 150px;
+      height: 150px;
+      border: 1px solid #fff;
+      margin: 50px;
+      text-align: center;
+      line-height: 150px;
+    }
+
+    .translate {
+      background-color: cadetblue;
+      /* animation: translateDiv 3s; */
+      
+      animation: translateDiv 3s linear 1s 3 normal forwards;
+      /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+      /* 
+      分别对应
+      1.动画名，
+      2.动画持续时间，
+      3.规定动画的速度曲线，有linear|easy-in|easy-out|easy-in-out,
+      4.动画延迟时间，
+      5.播放次数，infinite表示无限次数，
+      6.规定是否应该轮流反向播放动画，有normal默认|alternate轮流，
+      7.属性规定动画在播放之前或之后，其动画效果是否可见，有none|forwards|backwards|both;
+      */
+    }
+
+    .rotate {
+      background-color: darkkhaki;
+      animation: rotateDiv 3s linear 1s infinite alternate forwards;
+    }
+
+    .scale {
+      background-color: chocolate;
+      animation: scaleDiv 3s linear 1s 3 alternate forwards;
+    }
+
+    .skew {
+      background-color: lightgreen;
+      animation: skewDiv 3s;
+    }
+
+    @keyframes translateDiv {
+      from {
+        transform: translate(0, 0);
+      }
+
+      to {
+        width: 200px;
+        transform: translate(200px, -50px);
+      }
+    }
+
+    @keyframes rotateDiv {
+      from {
+        transform: rotate(0);
+      }
+
+      to {
+        background: yellow;
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes scaleDiv {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.5);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes skewDiv {
+      0% {
+        transform: skew(0, 0);
+      }
+
+      25% {
+        transform: skew(30deg, 0);
+      }
+
+      50% {
+        transform: skew(0, 0);
+      }
+
+      75% {
+        transform: skew(0, 30deg);
+      }
+
+      100% {
+        transform: skew(0, 0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="translate">
+    平移
+  </div>
+  <div class="rotate">
+    旋转
+  </div>
+  <div class="scale">
+    缩放
+  </div>
+  <div class="skew">
+    斜切
+  </div>
+</body>
+
+</html>

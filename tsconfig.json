@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "system",
+    "noImplicitAny": true,
+    "removeComments": true, //移除注释
+    "preserveConstEnums": true,
+    "sourceMap": false, //生成相应的map文件
+    "noEmitOnError": false, //如果报告任何错误，请不要编译
+    "outFile": "./dist/a.js"
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
