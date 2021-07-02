@@ -10,6 +10,7 @@ console.log(sayHello(user));
 let isBoolean: boolean = false
 let isBoolean2: boolean = Boolean(0)
 
+
 let isNumber: number = 1
 let isNumber2: number = 0xfd00d
 
@@ -29,6 +30,10 @@ let isNumber3: number = isUndefined2
 //下面的方法是错的
 // let isVoid3: void
 // let isNumber4: number = isVoid3
+
+let b = true
+// b = 123
+b = false
 
 //========================类型推论==========================
 //下面的方法是错误的
