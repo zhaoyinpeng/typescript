@@ -1,9 +1,9 @@
 function sayHello2(person: string) {
-  return 'Hello2, ' + person;
+  return 'Hello2, ' + person
 }
 
-let user2 = 'Tom';
-console.log(sayHello2(user2));
+let user2 = 'Tom'
+console.log(sayHello2(user2))
 
 let notSure: unknown = 4
 notSure = 'hello'
@@ -27,9 +27,14 @@ e = 'abc'
 f = e //报错！
 
 //1
-if(typeof e === 'string'){
-  f = e; //不报错，这里需要判断类型
+if (typeof e === 'string') {
+  f = e //不报错，这里需要判断类型
 }
 //2 类型断言,用于告诉解析器变量的实际类型
-f = e as string; //不报错
-f = <string> e; //不报错
+f = e as string //不报错
+f = <string>e //不报错
+
+enum enum_1 {
+  a = 1,
+  b = 1,
+}
